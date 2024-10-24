@@ -26,7 +26,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-img, table, div, section {
-    max-width: 100%;
-    overflow-x: auto; /* Ensure long content doesn't break the layout */
-}
