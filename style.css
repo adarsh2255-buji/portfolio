@@ -1,13 +1,16 @@
 /* Google fonts CDN link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+html, body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: black;
-    
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    max-width: 100%; /* Make sure the body doesn't exceed the viewport width */
 }
-*body{
+* {
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow issues */
+}
+body{
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     scroll-behavior: smooth;
@@ -490,6 +493,7 @@
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -593,4 +597,43 @@ footer p {
 
 #back-to-top:active {
     background-color: #c77b00;
+}
+
+/* "Go to Top" button styling */
+
+
+#go-to-top:hover {
+    background-color: #d89200;
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjust the quick links for smaller screens */
+    .quick-links-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #back-to-top {
+        bottom: 15px;
+        right: 15px;
+    }
+    footer p {
+        margin: 0;
+        color: #bbb;
+        font-size: .5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    /* Avoid large padding/margins causing overflow */
+    .quick-links-list,
+    footer {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+    }
 }
